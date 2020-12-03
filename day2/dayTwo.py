@@ -1,9 +1,11 @@
 with open("input.txt") as file:
-    lst = [x for x in file.readlines()]
+    lst = file.readlines()
 
 validCount = 0
 validCountTwo = 0
 
+# part 1
+# solution: 515
 for password in lst:
     parts = password.split(" ")
     lowest, highest = parts[0].split("-")
@@ -14,6 +16,8 @@ for password in lst:
 print(validCount)
 # 515
 
+# part two
+# solution 711
 for password in lst:
     parts = password.split(" ")
     lowest, highest = parts[0].split("-")
@@ -24,4 +28,3 @@ for password in lst:
     if (string[newLow] == character) != (string[newHigh] == character):
         validCountTwo += 1
 print(validCountTwo)
-# 711
