@@ -1,5 +1,3 @@
-import re
-
 with open("input.txt") as file:
     lst = [x for x in file.readlines()]
 
